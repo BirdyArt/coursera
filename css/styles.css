@@ -1,30 +1,86 @@
-.row-header {
-	margin: 0px auto;
-	padding: 0px auto;
+* {
+  font-family: Garamond;
 }
-
-.row-content {
-	margin: 0px auto;
-	padding: 50px 0px 50px 0px;
-	border-bottom: 1px ridge;
-	min-height: 400px;
+body {
+  color:#fff;
+  background:#fff;
 }
-
-.footer {
-	background-color: #D1C4E9;
-	margin: 0px auto;
-	padding: 20px 0px 20px 0px;
+footer {
+  font-size:1.3em;
+  color: #404040;
+  font-weight:bolder;
 }
-
-.jumbotron {
-	padding: 70px 30px 70px 30px;
-	margin: 0px auto;
-	background: #9575CD;
-	color: floralwhite;
+/*Header*/
+.navbar-brand {
+	padding-right: 50px;
 }
-
-.address {
-	font-size: 80%;
-	margin: 0px;
-	color: #000;
+#headerNav {
+  width: 100%;
+  height: 100%;
+  background-color:#F4F3F0;
+  color: #404040;
+  }
+#navbarNav {
+  text-align: center;
+  margin-left:-16px;
+  margin-right: -16px;
+}
+.nav-link {
+  color:#404040;
+  font-size: 22px;
+  font-weight: bolder;
+}
+.btn {
+  color:#404040;
+  font-size: 22px;
+  font-weight: bolder;
+  border-radius: 50px;
+}
+.nav-link:hover {
+  color:#959493;
+}
+.custom-toggler.navbar-toggler { 
+  margin-right: 2px;
+  border:2px solid #404040;
+}
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+  border:2px solid #669900;
+}
+.custom-toggler .navbar-toggler-icon { 
+  background-image: url( 
+"data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); 
+} 
+p.text-center {
+  color:#404040;
+  font-size: 2em;
+  font-weight: bolder;
+  margin-top:12px;
+}
+#mainCont {
+  color:#404040;
+  background-color: #F4F3F0;
+  padding-top: 15px;
+  width:90%;
+  margin-bottom:15px;
+}
+p.text-justify {
+  margin: 15px;
+}
+h3 {
+  font-weight: 500;
+}
+.dropdown .dropdown-menu {
+  border-radius:120;
+ }
+@media (min-width: 768px) {  
+.dropdown:hover .dropdown-menu {
+    display: block;
+    background: none;
+    margin-top: 0;
+  border-radius:0;
+ }
 }
