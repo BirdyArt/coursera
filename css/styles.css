@@ -12,13 +12,12 @@ footer {
 }
 /*Header*/
 .navbar-brand {
-	padding-right: 50px;
+  padding-right: 50px;
 }
 #headerNav {
-  width: 100%;
-  height: 100%;
-  background-color:#F4F3F0;
+  background: rgba(196, 196, 196, 0.65);
   color: #404040;
+  padding:0px;
   }
 #navbarNav {
   text-align: center;
@@ -54,25 +53,6 @@ footer {
   background-image: url( 
 "data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); 
 } 
-p.text-center {
-  color:#404040;
-  font-size: 2em;
-  font-weight: bolder;
-  margin-top:12px;
-}
-#mainCont {
-  color:#404040;
-  background-color: #F4F3F0;
-  padding-top: 15px;
-  width:90%;
-  margin-bottom:15px;
-}
-p.text-justify {
-  margin: 15px;
-}
-h3 {
-  font-weight: 500;
-}
 .dropdown .dropdown-menu {
   border-radius:120;
  }
@@ -83,4 +63,22 @@ h3 {
     margin-top: 0;
   border-radius:0;
  }
+}
+@media (min-width: 1360px) {
+  .container.max-width-1620 {
+    max-width: 1620px !important;
+  }
+}
+.jumbotron {
+  padding: 150px 30px 70px 30px;
+  margin: 0px auto;
+  background: url("/images/Header.webp") no-repeat center center;     
+  background-size: cover;
+  height:1080px;
+  opacity:70%;
+}
+.overlay {
+  background:rgba(0, 0, 0, 0.24);
+  background-size: cover;
+  height:1080px;
 }
