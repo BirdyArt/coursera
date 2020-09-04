@@ -109,10 +109,17 @@ footer {
   background-size: cover;
   padding: 35px 0px;
 }
+#say {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/Say.jpg");    
+  background-size: cover;
+  padding: 35px 0px;
+}
 #why {
   background-color: rgba(196, 196, 196, 0.2);    
   background-size: cover;
   padding: 35px 0px;
+  position: relative;
+  overflow: hidden;
 }
 #why h2 {
   font-size: 2.2rem;
@@ -129,7 +136,7 @@ footer {
   color: #FFFFFF;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-#sol h2 {
+#sol h2, #say h2 {
   font-size: 2.2rem;
   text-align: center;
   font-weight: 700;
@@ -138,14 +145,14 @@ footer {
   padding-bottom:0px;
   margin:0px;
 }
-#sol > * h5 {
+#sol > * h5, #say > * h5 {
   font-size: 1.5rem;
   font-weight: 700;
   color: #FFFFFF;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding: 12px 25px;
 }
-#sol > * h6 {
+#sol > * h6, #say > * h6 {
   font-size: 1rem;
   font-weight: 600;
   color: #FFFFFF;
@@ -160,6 +167,8 @@ footer {
   padding:20px 40px 10px 5px ;
   margin-top:20px;
   background-color: rgba(196, 196, 196, 0.9);
+  position:relative;
+  z-index:2;
 }
 #why button {
   color:#404040;
@@ -191,6 +200,89 @@ footer {
 #sol button:hover {
   background-color:rgba(196, 196, 196, 0.85);
 }
+.fas {
+ background-color:rgba(196, 196, 196, 0.7);
+ color:#404040;
+ border-radius:50px;
+ padding:12px;
+ filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+#say .fas {
+  margin:10px 25px;
+}
+.fa-fill-drip {
+  padding:12px 10px;
+}
+.fa-fire-alt {
+  padding:12px 14px;  
+}
+.lineDark {
+  height: 4px;
+  width: 120px;
+  margin-top:10px;
+  background-color: #404040;
+  border-radius: 10px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.lineLight {
+  height: 4px;
+  width: 120px;
+  margin-top:10px;
+  margin-bottom:35px;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+#why img {
+  margin-top:6px;
+  margin-bottom: 20px;
+  position:absolute center;
+  min-width:100%;
+  min-height:100%;
+  width:0;
+}
+@media (min-width: 992px) {
+  #why img {
+  margin-left: -70px;
+  z-index:1;
+  }
+}
+#accordion .card-header {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color:rgba(196, 196, 196, 0.7);
+  padding:0;
+  border: 0px;
+}
+#accordion .card-body {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-weight: bolder;
+  color:#404040;
+  background-color:rgba(196, 196, 196);
+  padding:10px;
+  font-size:1rem;
+}
+#accordion a {
+  text-decoration: none;
+  color:#404040;
+  font-size:1.2rem;
+  padding:25px;
+  font-weight: bolder;
+}
+#accordion .card-header:hover {
+  cursor:pointer;
+  background-color:rgba(196, 196, 196);
+}
+.mb-0 > a {
+  display: inline-block;
+  width: 100%;
+  padding:0.75rem 1.25rem;
+}
+.mb-0 > a[aria-expanded="true"] {
+  background-color:rgba(196, 196, 196)
+} 
+#carouselSay {
+  margin: 20px 100px;
+}
 @media (max-width: 575px) {
   .navbar-brand img {
     width: 220px;
@@ -217,34 +309,33 @@ footer {
   #sol button {
   margin: 5px 5px;
   }
+  .carousel-control-next {
+  margin-right: -2.4rem !important;
+  }
+  .carousel-control-prev {
+  margin-left:  -2.4rem !important;
+  }
+  #carouselSay {
+  margin: 20px 50px;
+  }
+  .review {
+    padding:20px 0px;
+  }
 } 
-.fas {
- background-color:rgba(196, 196, 196, 0.7);
- color:#404040;
- border-radius:50px;
- padding:12px;
- filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+.carousel-control-next {
+  margin-right:-8rem;
 }
-.fa-fill-drip {
-  padding:12px 10px;
+.carousel-control-prev {
+  margin-left:-8rem;
 }
-.fa-fire-alt {
-  padding:12px 14px;  
+.fa-chevron-right {
+  background:none;
+  color:rgba(196, 196, 196);
 }
-.lineDark {
-  height: 4px;
-  width: 120px;
-  margin-top:10px;
-  background-color: #404040;
-  border-radius: 10px;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+.fa-chevron-left {
+  background:none;
+  color:rgba(196, 196, 196);
 }
-.lineLight {
-  height: 4px;
-  width: 120px;
-  margin-top:10px;
-  margin-bottom:35px;
-  border-radius: 10px;
-  background-color: #FFFFFF;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+.carousel-indicators {
+  margin-bottom:-2rem;
 }
