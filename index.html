@@ -7,71 +7,60 @@
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
   <link rel="stylesheet" href="css/styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Sarpanch&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
   <title>ViksMetalWorks</title>
   <link rel="icon" href="images/VMW - logo.png">
 </head>
 <body>
-	<nav id="headerNav" class="navbar navbar-dark navbar-expand-sm fixed-top">
-		<div class="container max-width-1620">
+	<nav id="headerNav" class="navbar navbar-dark navbar-expand-lg fixed-top">
+		<div class="mx-auto d-lg-flex d-block flex-sm-nowrap">
 			<a class="navbar-brand" href="index.html">
-   			<img src="images/VMW - full logo.png" width="300" height="75" class="d-inline-block align-bottom" alt="">
+   			<img src="images/VMW - full logo.png" width="275" height="65" class="d-inline-block" alt="">
  			</a>
-   			<button class="navbar-toggler ml-auto custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+   			<button class="navbar-toggler custom-toggler my-auto" type="button" data-toggle="collapse" data-target="#navbarNav">
    			<span class="navbar-toggler-icon"></span>
   			</button>
-	  		<div class="collapse navbar-collapse" id="navbarNav">
-	    		<ul class="navbar-nav justify-content-center">
-	    			<li class="nav-item dropdown">
-	          			<a class="nav-link dropdown" href="#" role="button" d aria-haspopup="true" aria-expanded="false">
-	          			Services
-	          			</a>
-			          	<div class="dropdown-menu">
-				            <a class="dropdown-item" href="#">Machining</a>
-				            <a class="dropdown-item" href="#">Fabrication</a>
-				            <a class="dropdown-item" href="#">Welding</a>
-				            <a class="dropdown-item" href="#">Painting</a>
-			          	</div>
-        			</li>
+	  		<div class="collapse navbar-collapse text-center" id="navbarNav">
+	    		<ul class="navbar-nav">
+	          		<a class="nav-link dropdown lang" key="services" href="index.html#sol" role="button">
+	          		</a>
 			        <li class="nav-item dropdown">
-				        <a class="nav-link dropdown" href="portfolio.html" role="button" aria-haspopup="true" aria-expanded="false">
-				        Portfolio
+				        <a class="nav-link dropdown lang" key="portfolio" href="portfolio.html" role="button" aria-haspopup="true" aria-expanded="false">
 				        </a>
 				        <div class="dropdown-menu">
-					        <a class="dropdown-item" href="#">Category 1</a>
+					        <a class="dropdown-item lang" key="restcafe" href="restaurantscafe.html"></a>
 					        <a class="dropdown-item" href="#">Category 2</a>
 				        </div>
 			        </li>
-			        <li class="nav-item dropdown">
-				        <a class="nav-link dropdown" href="portfolio.html" role="button" aria-haspopup="true" aria-expanded="false">
-				        Stainless Steel
-				        </a>
-				        <div class="dropdown-menu">
-					        <a class="dropdown-item" href="#">Action</a>
-					        <a class="dropdown-item" href="#">Another action</a>
-				        </div>
-			        </li>
-			        <a class="nav-link" href="contactus.html" role="button">
-	          			Contact Us
+				    <a class="nav-link dropdown lang" key="reviews" href="index.html#say" role="button">
+				    </a>
+			        <a class="nav-link lang" key="contact us" href="contactus.html" role="button">
 	          		</a>
-	          		<a class="nav-link" href="about.html" role="button">
-	          			About
+	          		<a class="nav-link lang" key="about" href="about.html" role="button">
 	          		</a>
-	    		</ul>
+	          	</ul>
+				<div class="btn-group btn-group-toggle" data-toggle="buttons">
+					  	<label class="btn btn-secondary translate" id="en">
+					    <input type="radio" name="options" id="option1">En
+					  	</label>
+					  	<label class="btn btn-secondary translate" id="ru">
+					    <input type="radio" name="options" id="option2">Ru
+					  	</label>
+				</div>
 			</div>
 		</div>
 	</nav>
 	<div class="hero-image">
   		<div class="hero-text">
-    		<p>A PROVEN LEADER IN MACHINING, FABRICATION AND WELDING</p>
-    		<button>GET A QUOTE</button>
+    		<p class="lang" key="herotext"></p>
+    		<button class="lang" key="quote"></button>
   		</div>
 	</div>
  	<div id="sol">
 	 	<div class="container max-width-1620">
 	 		<div class="row">
 	 			<div class="col-12 align-self-center">
-	 				<h2>SOLUTIONS & SERVICES</h2>
+	 				<h2 class="lang" key="solser"></h2>
 	 				<div class="lineLight mx-auto"></div>
 	 			</div>
 	 			<div class="col-12 col-lg-3 col-md-6">
@@ -80,9 +69,9 @@
 		 					<i class="fas fa-cog fa-2x"></i>				
 		 				</div>
 		 				<div class="col-10 ml-auto">
-		 					<h5>MACHINING</h5>
-		 					<h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero. Vestibulum ac tristique diam. Aliquam imperdiet tempor porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero. Vestibulum ac tristique diam. Aliquam imperdiet tempor porttitor.</h6>
-		 					<button>LEARN MORE</button>
+		 					<h5 class="lang" key="machining"></h5>
+		 					<h6 class="lang" key="machiningtext"></h6>
+		 					<button class="lang" key="learnmore"></button>
 		 				</div>
 		 			</div>	
 	 			</div>
@@ -92,9 +81,9 @@
 		 					<i class="fas fa-drafting-compass fa-2x"></i>	
 		 				</div>
 		 				<div class="col-10 ml-auto">
-		 					<h5>FABRICATION</h5>
-		 					<h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero. Vestibulum ac tristique diam. Aliquam imperdiet tempor porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero. Vestibulum ac tristique diam. Aliquam imperdiet tempor porttitor.</h6>
-		 					<button>LEARN MORE</button>
+		 					<h5 class="lang" key="engineering"></h5>
+		 					<h6 class="lang" key="engineeringtext"></h6>
+		 					<button class="lang" key="learnmore"></button>
 		 				</div>
 		 			</div>		
 	 			</div>
@@ -104,9 +93,9 @@
 		 					<i class="fas fa-fire-alt fa-2x"></i>
 		 				</div>
 		 				<div class="col-10 ml-auto">
-		 					<h5>WELDING</h5>
-		 					<h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero. Vestibulum ac tristique diam. Aliquam imperdiet tempor porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero. Vestibulum ac tristique diam. Aliquam imperdiet tempor porttitor.</h6>
-		 					<button>LEARN MORE</button>
+		 					<h5 class="lang" key="welding"></h5>
+		 					<h6 class="lang" key="weldingtext"></h6>
+		 					<button class="lang" key="learnmore"></button>
 		 				</div>
 		 			</div>		
 	 			</div>
@@ -116,9 +105,9 @@
 		 					<i class="fas fa-fill-drip fa-2x"></i> 
 		 				</div>
 		 				<div class="col-10 ml-auto">
-		 					<h5>PAINTING</h5>
-		 					<h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero. Vestibulum ac tristique diam. Aliquam imperdiet tempor porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero. Vestibulum ac tristique diam. Aliquam imperdiet tempor porttitor.</h6>
-		 					<button>LEARN MORE</button>
+		 					<h5 class="lang" key="painting"></h5>
+		 					<h6 class="lang" key="paintingtext"></h6>
+		 					<button class="lang" key="learnmore"></button>
 		 				</div>
 		 			</div>	
 	 			</div>
@@ -129,10 +118,10 @@
 	 	<div class="container max-width-1620">
 	 		<div class="row">
 	 			<div class="col-12 col-lg-4  align-self-center">
-	 				<h2>WHY VIKS?</h2>
+	 				<h2 class="lang" key="whyviks"></h2>
 	 				<div class="lineDark"></div>
-	 				<h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero. Vestibulum ac tristique diam. Aliquam imperdiet tempor porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero.</h6>
-	 				<button>LEARN MORE</button>
+	 				<h6 class="lang" key="whyvikstext"></h6>
+	 				<button class="lang" key="learnmore"></button>
 	 			</div>
 	 			<div class="col-12 col-lg-4 align-self-center">
 	 				<img src="images/Why.jpg" alt="Responsive image">				
@@ -142,48 +131,48 @@
                     	<div class="card">
                             <div class="card-header" role="tab" id="ach1">
                                 <h3 class="mb-0">
-                                    <a data-toggle="collapse" data-target="#ac1" aria-expanded="true">20 YEARS OF EXCELLENCE</a>
+                                    <a data-toggle="collapse" data-target="#ac1" aria-expanded="true" class="lang" key="20years"></a>
                                 </h3>
                             </div>
-                                <div role="tabpanel" class="collapse show" id="ac1" data-parent="#accordion">
-                                    <div class="card-body">                               
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero. Vestibulum ac tristique diam. Aliquam imperdiet tempor porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero.</p>
-                                    </div>    
-                                </div>
+                            <div role="tabpanel" class="collapse show" id="ac1" data-parent="#accordion">
+                                <div class="card-body">                   
+                                    <p class="lang" key="20yearstext"></p>
+                                </div>    
+                            </div>
                         </div>
                         <div class="card">
                             <div class="card-header" role="tab" id="ach2">
                             <h3 class="mb-0">
-                                <a class="collapsed" data-toggle="collapse" data-target="#ac2" aria-expanded="false">CLIENT IS OUR FOCUS</a>
+                                <a class="collapsed lang" data-toggle="collapse" data-target="#ac2" aria-expanded="false" key="clientfocus"></a>
                             </h3>
                         </div>
                         <div class="collapse" id="ac2" data-parent="#accordion">
                             <div class="card-body">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero. Vestibulum ac tristique diam. Aliquam imperdiet tempor porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero.</p>
+                                <p class="lang" key="clientfocustext"></p>
                             </div>
                         </div>
                         </div>
                         <div class="card">
                             <div class="card-header" role="tab" id="ach3">
                             <h3 class="mb-0">
-                                <a class="collapsed" data-toggle="collapse" data-target="#ac3" aria-expanded="false">FAST AND RELIABLE</a>
+                                <a class="collapsed lang" data-toggle="collapse" data-target="#ac3" aria-expanded="false" key="fastrel"></a>
                             </h3>
                         </div>
                         <div class="collapse" id="ac3" data-parent="#accordion">
                             <div class="card-body">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero. Vestibulum ac tristique diam. Aliquam imperdiet tempor porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero.</p>
+                                <p class="lang" key="fastreltext"></p>
                             </div>
                         </div>
                         </div>
                         <div class="card">
                             <div class="card-header" role="tab" id="ach4">
                             <h3 class="mb-0">
-                                <a class="collapsed" data-toggle="collapse" data-target="#ac4" aria-expanded="false">CONSTANT INNOVATION</a>
+                                <a class="collapsed lang" data-toggle="collapse" data-target="#ac4" aria-expanded="false" key="innovation"></a>
                             </h3>
                         </div>
                         <div class="collapse" id="ac4" data-parent="#accordion">
                             <div class="card-body">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero. Vestibulum ac tristique diam. Aliquam imperdiet tempor porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero.</p>
+                                <p class="lang" key="innovationtext"></p>
                             </div>
                         </div>
                     	</div>                                                                 
@@ -196,7 +185,7 @@
 	 	<div class="container max-width-1620">
 	 		<div class="row">
 	 			<div class="col-12 align-self-center">
-	 				<h2>WHAT OUR CUSTOMERS SAY</h2>
+	 				<h2 class="lang" key="whatcust"></h2>
 	 				<div class="lineLight mx-auto"></div>
 	 			</div>
 	 			<div id="carouselSay" class="carousel slide" data-interval="false">
@@ -211,58 +200,27 @@
 							    	<div class="col-12 col-lg-4 col-md-6 d-none d-sm-block">
 						 				<div class="row">
 							 				<div class="col-12 ml-auto review">
-							 					<h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero. Vestibulum ac tristique diam. Aliquam imperdiet tempor porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero. Vestibulum ac tristique diam. Aliquam imperdiet tempor porttitor.</h6>
+							 					<h6 class="lang" key="review1"></h6>
 							 					<i class="fas fa-comment fa-2x"></i>
-							 					<h5>REVIEW COMPANY 1</h5>
+							 					<h5 class="lang" key="review1com"></h5>
 							 				</div>
 							 			</div>		
 		 							</div>
-		 							<div class="col-12 col-lg-4 col-md-6 d-none d-sm-block">
+		 							<div class="col-12 col-lg-4 col-md-6 d-none d-md-block">
 						 				<div class="row">
 							 				<div class="col-12 ml-auto review">
-							 					<h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero. Vestibulum ac tristique diam. Aliquam imperdiet tempor porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero. Vestibulum ac tristique diam. Aliquam imperdiet tempor porttitor.</h6>
+							 					<h6 class="lang" key="review2"></h6>
 							 					<i class="fas fa-comment fa-2x"></i>
-							 					<h5>REVIEW COMPANY 2</h5>
+							 					<h5 class="lang" key="review2com"></h5>
 							 				</div>
 							 			</div>		
 		 							</div>
-		 							<div class="col-12 col-lg-4 col-md-6">
+		 							<div class="col-12 col-lg-4 col-md-6 d-none d-lg-block">
 						 				<div class="row">
 							 				<div class="col-12 ml-auto review">
-							 					<h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero. Vestibulum ac tristique diam. Aliquam imperdiet tempor porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero. Vestibulum ac tristique diam. Aliquam imperdiet tempor porttitor.</h6>
+							 					<h6 class="lang" key="review3"></h6>
 							 					<i class="fas fa-comment fa-2x"></i>
-							 					<h5>REVIEW COMPANY 3</h5>
-							 				</div>
-							 			</div>		
-		 							</div>
-		 						</div>
-						    </div>
-						    <div class="carousel-item">
-						      <div class="row">
-							    	<div class="col-12 col-lg-4 col-md-6 d-none d-sm-block">
-						 				<div class="row">
-							 				<div class="col-12 ml-auto review">
-							 					<h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero. Vestibulum ac tristique diam. Aliquam imperdiet tempor porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero. Vestibulum ac tristique diam. Aliquam imperdiet tempor porttitor.</h6>
-							 					<i class="fas fa-comment fa-2x"></i>
-							 					<h5>REVIEW COMPANY 4</h5>
-							 				</div>
-							 			</div>		
-		 							</div>
-		 							<div class="col-12 col-lg-4 col-md-6 d-none d-sm-block">
-						 				<div class="row">
-							 				<div class="col-12 ml-auto review">
-							 					<h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero. Vestibulum ac tristique diam. Aliquam imperdiet tempor porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero. Vestibulum ac tristique diam. Aliquam imperdiet tempor porttitor.</h6>
-							 					<i class="fas fa-comment fa-2x"></i>
-							 					<h5>REVIEW COMPANY 5</h5>
-							 				</div>
-							 			</div>		
-		 							</div>
-		 							<div class="col-12 col-lg-4 col-md-6">
-						 				<div class="row">
-							 				<div class="col-12 ml-auto review">
-							 					<h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero. Vestibulum ac tristique diam. Aliquam imperdiet tempor porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero. Vestibulum ac tristique diam. Aliquam imperdiet tempor porttitor.</h6>
-							 					<i class="fas fa-comment fa-2x"></i>
-							 					<h5>REVIEW COMPANY 6</h5>
+							 					<h5 class="lang" key="review3com"></h5>
 							 				</div>
 							 			</div>		
 		 							</div>
@@ -273,27 +231,58 @@
 							    	<div class="col-12 col-lg-4 col-md-6 d-none d-sm-block">
 						 				<div class="row">
 							 				<div class="col-12 ml-auto review">
-							 					<h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero. Vestibulum ac tristique diam. Aliquam imperdiet tempor porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero. Vestibulum ac tristique diam. Aliquam imperdiet tempor porttitor.</h6>
+							 					<h6 class="lang" key="review4"></h6>
 							 					<i class="fas fa-comment fa-2x"></i>
-							 					<h5>REVIEW COMPANY 7</h5>
+							 					<h5 class="lang" key="review4com"></h5>
 							 				</div>
 							 			</div>		
 		 							</div>
-		 							<div class="col-12 col-lg-4 col-md-6 d-none d-sm-block">
+		 							<div class="col-12 col-lg-4 col-md-6 d-none d-md-block">
 						 				<div class="row">
 							 				<div class="col-12 ml-auto review">
-							 					<h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero. Vestibulum ac tristique diam. Aliquam imperdiet tempor porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero. Vestibulum ac tristique diam. Aliquam imperdiet tempor porttitor.</h6>
+							 					<h6 class="lang" key="review5"></h6>
 							 					<i class="fas fa-comment fa-2x"></i>
-							 					<h5>REVIEW COMPANY 8</h5>
+							 					<h5 class="lang" key="review5com"></h5>
 							 				</div>
 							 			</div>		
 		 							</div>
-		 							<div class="col-12 col-lg-4 col-md-6">
+		 							<div class="col-12 col-lg-4 col-md-6 d-none d-lg-block">
 						 				<div class="row">
 							 				<div class="col-12 ml-auto review">
-							 					<h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero. Vestibulum ac tristique diam. Aliquam imperdiet tempor porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero. Vestibulum ac tristique diam. Aliquam imperdiet tempor porttitor.</h6>
+							 					<h6 class="lang" key="review6"></h6>
 							 					<i class="fas fa-comment fa-2x"></i>
-							 					<h5>REVIEW COMPANY 9</h5>
+							 					<h5 class="lang" key="review6com"></h5>
+							 				</div>
+							 			</div>		
+		 							</div>
+		 						</div>
+						    </div>
+						    <div class="carousel-item">
+						      <div class="row">
+							    	<div class="col-12 col-lg-4 col-md-6 d-none d-sm-block">
+						 				<div class="row">
+							 				<div class="col-12 ml-auto review">
+							 					<h6 class="lang" key="review7"></h6>
+							 					<i class="fas fa-comment fa-2x"></i>
+							 					<h5 class="lang" key="review7com"></h5>
+							 				</div>
+							 			</div>		
+		 							</div>
+		 							<div class="col-12 col-lg-4 col-md-6 d-none d-md-block">
+						 				<div class="row">
+							 				<div class="col-12 ml-auto review">
+							 					<h6 class="lang" key="review8"></h6>
+							 					<i class="fas fa-comment fa-2x"></i>
+							 					<h5 class="lang" key="review8com"></h5>
+							 				</div>
+							 			</div>		
+		 							</div>
+		 							<div class="col-12 col-lg-4 col-md-6 d-none d-lg-block">
+						 				<div class="row">
+							 				<div class="col-12 ml-auto review">
+							 					<h6 class="lang" key="review9"></h6>
+							 					<i class="fas fa-comment fa-2x"></i>
+							 					<h5 class="lang" key="review9com"></h5>
 							 				</div>
 							 			</div>		
 		 							</div>
@@ -316,34 +305,37 @@
 	 	<div class="container max-width-1620">
 	 		<div class="row">
 	 			<div class="col-12 col-lg-6  align-self-center">
-	 				<h2>Want more information? Learn how we can help your next project succeed</h2>
+	 				<h2 class="lang" key="moreinfo"></h2>
 	 				<div class="lineDark"></div>
 	 			</div>
 	 			<div class="col-12 col-lg-6  align-self-center">
-	 				<form>
+	 				<form id="contact-form" method="post" action="contact.php" role="form">
+	 					<div class="messages"></div>
                         <div class="form-row">
                             <div class="form-group col-sm-4">
-                                    <label class="sr-only" for="exampleInputName3">Full Name</label>
-                                    <input type="name" class="form-control form-control-sm mr-1" id="exampleInputName3" placeholder="Name">
+                                    <label class="form-label lang" key="name" for="FirstName"></label>
+                                    <input type="text" name="name" class="form-control form-control-md mr-1" id="FirstName" placeholder="Full Name" required="required" data-error="Full Name is required">
+                                    <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group col-sm-4">
-                                    <label class="sr-only" for="exampleInputEmail3">Email</label>
-                                    <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="Email">
+                                    <label class="form-label lang" key="email" for="exampleInputEmail3"></label>
+                                    <input type="email" name="email" class="form-control form-control-md mr-1" id="exampleInputEmail3" placeholder="Email" required="required" data-error="Valid email is required">
+                                    <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group col-sm-4">
-                                <label class="sr-only" for="exampleInputPhone3">Phone Number</label>
-                                <input type="phone" class="form-control form-control-sm mr-1" id="exampleInputPhone3" placeholder="Phone">
+                                <label class="form-label lang" key="phone" for="exampleInputPhone3"></label>
+                                <input type="tel" name="phone" class="form-control form-control-md mr-1" id="exampleInputPhone3" placeholder="Phone #" required="required" data-error="Valid phone number is required">
+                                <div class="help-block with-errors"></div>
                             </div>
                             <div class="col-sm-auto">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox">
-                                    <label class="form-check-label"> Receive Newsletters
-                                    </label>
+                                    <label class="form-check-label lang" key="receivenews"></label>
                                 </div>
                             </div>
                         </div>
                         <div class="form-row">
-                            <button type="submit" class="btn btn-primary btn-sm ml-1">Submit</button>        
+                            <button type="submit" class="btn btn-primary btn-sm ml-1 lang" key="submit" value="Send message"></button>    
                         </div>
                     </form>     
 	 			</div>
@@ -353,37 +345,33 @@
  	<footer class="footer">
         <div class="container">
             <div class="row">             
-                <div class="col-12 offset-sm-1 col-sm-4">
-                    <h3>Links</h3>
+                <div class="col-12 col-md-4">
+                    <h3 class="lang" key="links"></h3>
                     <div class="row">
                     	<div class="col-6">
                     		<ul class="list-unstyled">
-		                        <li><a href="#">Home</a></li>
-		                        <li><a href="#">Services</a></li>
-		                        <li><a href="#">Portfolio</a></li>
+		                         <li><a class="lang" key="home" href="index.html"></a></li>
+		                        <li><a class="lang" key="services" href="index.html#sol"></a></li>
+		                        <li><a class="lang" key="portfolio" href="portfolio.html"></a></li>
                     		</ul>
                     	</div>
                     	<div class="col-6">
                     		<ul class="list-unstyled">
-		                        <li><a href="#">Reviews</a></li>
-		                        <li><a href="#">About</a></li>
-		                        <li><a href="#">Contact</a></li>
+		                        <li><a class="lang" key="reviews" href="index.html#say"></a></li>
+		                        <li><a class="lang" key="about" href="about.html"></a></li>
+		                        <li><a class="lang" key="contact us" href="contactus.html"></a></li>
                     		</ul>
                     	</div>
                     </div>
                 </div>
-                <div class="col-12 col-sm-6">
+                <div class="col-12 col-md-8">
                 	<div class="row">
-                		<div class="col-12 col-sm-6">
-                    		<h3>Our Address</h3>
-                    		<address>
-		              		2, Building 4, Nagornoe Shosse<br>
-		              		Khimki, Moscow Region<br>
-		              		RUSSIAN FEDERATION<br>
-		              		</address>
+                		<div class="col-12 col-md-6">
+                    		<h3 class="lang" key="address"></h3>
+                    		<address class="lang" key="addressvalue"></address>
 		              	</div>
-		              	<div class="col-12 col-sm-6">
-                    		<h3>Contact Us</h3>
+		              	<div class="col-12 col-md-6">
+                    		<h3 class="lang" key="contact us"></h3>
                     		<i class="fas fa-phone fa-lg"></i> <a href="tel:+7 495 571-30-57">+7 495 571-30-57</a><br>
 		              		<i class="fas fa-mobile-alt fa-lg"></i>: <a href="tel:+7 926 209-91-78">+7 926 209-91-78</a><br>
 		              		<i class="fas fa-envelope fa-lg"></i>: <a href="mailto:info@veks2000.ru">info@veks2000.ru</a>
@@ -401,6 +389,8 @@
 	   <script src="node_modules/jquery/jquery.min.js"></script>
 	   <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
 	   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	   <script src="node_modules/bootstrap-validator/dist/validator.min.js"></script>
 	   <script src="/js/Main.js"></script>
+	   <script src="/contact.js"></script>
 </body>
 </html>

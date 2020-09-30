@@ -7,55 +7,46 @@
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
   <link rel="stylesheet" href="css/styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Sarpanch&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
   <title>ViksMetalWorks</title>
   <link rel="icon" href="images/VMW - logo.png">
 </head>
 <body>
-	<nav id="headerNav" class="navbar navbar-dark navbar-expand-sm fixed-top">
-		<div class="container max-width-1620">
+	<nav id="headerNav" class="navbar navbar-dark navbar-expand-lg fixed-top">
+		<div class="mx-auto d-lg-flex d-block flex-sm-nowrap">
 			<a class="navbar-brand" href="index.html">
-   			<img src="images/VMW - full logo.png" width="300" height="75" class="d-inline-block align-bottom" alt="">
+   			<img src="images/VMW - full logo.png" width="275" height="65" class="d-inline-block" alt="">
  			</a>
-   			<button class="navbar-toggler ml-auto custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+   			<button class="navbar-toggler custom-toggler my-auto" type="button" data-toggle="collapse" data-target="#navbarNav">
    			<span class="navbar-toggler-icon"></span>
   			</button>
-	  		<div class="collapse navbar-collapse" id="navbarNav">
-	    		<ul class="navbar-nav justify-content-center">
-	    			<li class="nav-item dropdown">
-	          			<a class="nav-link dropdown" href="home&living.html" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	          			Cutting
-	          			</a>
-			          	<div class="dropdown-menu">
-				            <a class="dropdown-item" href="#">Laser Cutting</a>
-				            <a class="dropdown-item" href="#">Gas Cutting</a>
-			          	</div>
-        			</li>
+	  		<div class="collapse navbar-collapse text-center" id="navbarNav">
+	    		<ul class="navbar-nav">
+	          		<a class="nav-link dropdown lang" key="services" href="index.html#sol" role="button">
+	          		</a>
 			        <li class="nav-item dropdown">
-				        <a class="nav-link dropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				        Painting
+				        <a class="nav-link dropdown lang" key="portfolio" href="portfolio.html" role="button" aria-haspopup="true" aria-expanded="false">
 				        </a>
 				        <div class="dropdown-menu">
-					        <a class="dropdown-item" href="#">Action</a>
-					        <a class="dropdown-item" href="#">Another action</a>
+					        <a class="dropdown-item lang" key="restcafe" href="restaurantscafe.html"></a>
+					        <a class="dropdown-item" href="#">Category 2</a>
 				        </div>
 			        </li>
-			        <li class="nav-item dropdown">
-				        <a class="nav-link dropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				        Stainless Steel
-				        </a>
-				        <div class="dropdown-menu">
-					        <a class="dropdown-item" href="#">Action</a>
-					        <a class="dropdown-item" href="#">Another action</a>
-				        </div>
-			        </li>
-			        <a class="nav-link" href="contactus.html" role="button">
-	          			Contact Us
+				    <a class="nav-link dropdown lang" key="reviews" href="index.html#say" role="button">
+				    </a>
+			        <a class="nav-link lang" key="contact us" href="contactus.html" role="button">
 	          		</a>
-	          		<a class="nav-link" href="about.html" role="button">
-	          			About
+	          		<a class="nav-link lang" key="about" href="about.html" role="button">
 	          		</a>
-	    		</ul>
+	          	</ul>
+				<div class="btn-group btn-group-toggle" data-toggle="buttons">
+					  	<label class="btn btn-secondary translate" id="en">
+					    <input type="radio" name="options" id="option1">En
+					  	</label>
+					  	<label class="btn btn-secondary translate" id="ru">
+					    <input type="radio" name="options" id="option2">Ru
+					  	</label>
+				</div>
 			</div>
 		</div>
 	</nav>
@@ -63,50 +54,85 @@
 		<div class="container max-width-1620">
 			<div class="row">
 		 		<div class="col-12">
-		            <h3>Our Portfolio</h3>
+		            <h3 class="lang" key="ourportfolio"></h3>
 		        </div>
 		        <ol class="col-12 breadcrumb">
-		            <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
-		            <li class="breadcrumb-item active">Portfolio</li>
+		            <li class="breadcrumb-item"><a class="lang" key="home" href="./index.html"></a></li>
+		            <li class="breadcrumb-item active lang" key="portfolio"></li>
 		        </ol>
 		    </div>
 		</div>
 	</div>
- 	
+ 	<div class="container max-width-1620">
+	    <div class="row">
+	     	<div class="col-12 col-md-3 col-sm-6">
+	          	<div class="full w-100" id="cat1">
+	          		<a href="restaurantscafe.html">
+	             	<div class="overlay-effect h-100 w-100">
+	             		<h3 class="lang" key="restcafe"></h3>
+	             	</div>
+	             	</a>
+	          	</div>
+	        </div>
+	        <div class="col-12 col-md-3 col-sm-6">
+	          	<div class="full w-100" id="cat2">
+	             	<a href="#">
+	             	<div class="overlay-effect h-100 w-100">
+	             		<h3 class="lang" key="painting1"></h3>
+	             	</div>
+	             	</a>
+	          	</div>
+	        </div>
+	        <div class="col-12 col-md-3 col-sm-6">
+	          	<div class="full w-100" id="cat3">
+	             	<a href="#l">
+	             	<div class="overlay-effect h-100 w-100">
+	             		<h3 class="lang" key="restcafe"></h3>
+	             	</div>
+	             	</a>
+	          	</div>
+	        </div>
+	        <div class="col-12 col-md-3 col-sm-6">
+	          	<div class="full w-100" id="cat4">
+	             	<a href="#">
+	             	<div class="overlay-effect h-100 w-100">
+	             		<h3 class="lang" key="restcafe"></h3>
+	             	</div>
+	             	</a>
+	          	</div>
+	        </div>
+	    </div>
+ 	</div>
  	<footer class="footer">
         <div class="container">
             <div class="row">             
-                <div class="col-12 offset-sm-1 col-sm-4">
-                    <h3>Links</h3>
+                <div class="col-12 col-md-4">
+                    <h3 class="lang" key="links"></h3>
                     <div class="row">
                     	<div class="col-6">
                     		<ul class="list-unstyled">
-		                        <li><a href="#">Home</a></li>
-		                        <li><a href="#">Services</a></li>
-		                        <li><a href="#">Portfolio</a></li>
+		                         <li><a class="lang" key="home" href="index.html"></a></li>
+		                        <li><a class="lang" key="services" href="index.html#sol"></a></li>
+		                        <li><a class="lang" key="portfolio" href="portfolio.html"></a></li>
                     		</ul>
                     	</div>
                     	<div class="col-6">
                     		<ul class="list-unstyled">
-		                        <li><a href="#">Reviews</a></li>
-		                        <li><a href="#">About</a></li>
-		                        <li><a href="#">Contact</a></li>
+		                        <li><a class="lang" key="reviews" href="index.html#say"></a></li>
+		                        <li><a class="lang" key="about" href="about.html"></a></li>
+		                        <li><a class="lang" key="contact us" href="contactus.html"></a></li>
                     		</ul>
                     	</div>
                     </div>
                 </div>
-                <div class="col-12 col-sm-6">
+                <div class="col-12 col-md-8">
                 	<div class="row">
-                		<div class="col-12 col-sm-6">
-                    		<h3>Our Address</h3>
-                    		<address>
-		              		2, Building 4, Nagornoe Shosse<br>
-		              		Khimki, Moscow Region<br>
-		              		RUSSIAN FEDERATION<br>
-		              		</address>
+                		<div class="col-12 col-md-6">
+                    		<h3 class="lang" key="address"></h3>
+                    		<address class="lang" key="addressvalue"></address>
 		              	</div>
-		              	<div class="col-12 col-sm-6">
-                    		<h3>Contact Us</h3>
+		              	<div class="col-12 col-md-6">
+                    		<h3 class="lang" key="contact us"></h3>
                     		<i class="fas fa-phone fa-lg"></i> <a href="tel:+7 495 571-30-57">+7 495 571-30-57</a><br>
 		              		<i class="fas fa-mobile-alt fa-lg"></i>: <a href="tel:+7 926 209-91-78">+7 926 209-91-78</a><br>
 		              		<i class="fas fa-envelope fa-lg"></i>: <a href="mailto:info@veks2000.ru">info@veks2000.ru</a>
@@ -124,6 +150,8 @@
 	   <script src="node_modules/jquery/jquery.min.js"></script>
 	   <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
 	   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	   <script src="node_modules/bootstrap-validator/dist/validator.min.js"></script>
 	   <script src="/js/Main.js"></script>
+	   <script src="/contact.js"></script>
 </body>
 </html>
