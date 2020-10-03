@@ -1,17 +1,3 @@
-$(document).ready(function() {
-    $(function () {
-      $(document).scroll(function () {
-          var $nav = $(".fixed-top");
-          $nav.toggleClass('scrolled', $(this).scrollTop() > $(".hero-image").height());
-        });
-    });
-    $('#exampleModal').on('show.bs.modal', function (e) {
-  		if($(window).width() < 576)  {
-    	return e.preventDefault()
-  	};
-	});
-});
-
 var arrLang = {
   "en": {
     "services": "Services",
@@ -60,7 +46,7 @@ var arrLang = {
     "fastreltext":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero. Vestibulum ac tristique diam. Aliquam imperdiet tempor porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero.",
     "innovation":"CONSTANT INNOVATION",
     "innovationtext":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero. Vestibulum ac tristique diam. Aliquam imperdiet tempor porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero.",
-    "quote":"GET A QUOTE",
+    "quote":"OUR PORTFOLIO",
     "solser":"SOLUTIONS & SERVICES",
     "welding":"WELDING & CUTTING",
     "weldingtext":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero. Vestibulum ac tristique diam. Aliquam imperdiet tempor porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero. Vestibulum ac tristique diam. Aliquam imperdiet tempor porttitor.",
@@ -75,7 +61,16 @@ var arrLang = {
     "loccont":"Location & Contact Info",
     "contacts": "Contacts",
     "getintouch":"GET IN TOUCH",
-    "painting1":"Painting"
+    "painting1":"Painting",
+    "aboutinfo":"About Our Company",
+    "20yearsquality":"20 YEARS OF EXCELLENCE",
+    "aboutcompany":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero. Vestibulum ac tristique diam. Aliquam imperdiet tempor porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero. Vestibulum ac tristique diam. Aliquam imperdiet tempor porttitor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero. Vestibulum ac tristique diam. Aliquam imperdiet tempor porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero. Vestibulum ac tristique diam. Aliquam imperdiet tempor porttitor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero. Vestibulum ac tristique diam. Aliquam imperdiet tempor porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero. Vestibulum ac tristique diam. Aliquam imperdiet tempor porttitor.",
+    "ourservices":"SERVICES WE OFFER",
+    "ourservicestext":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero. Vestibulum ac tristique diam. Aliquam imperdiet tempor porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero. Vestibulum ac tristique diam. Aliquam imperdiet tempor porttitor.",
+    "ourpartners":"OUR PARTNERS",
+    "ourpartnerstext":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero. Vestibulum ac tristique diam. Aliquam imperdiet tempor porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero. Vestibulum ac tristique diam. Aliquam imperdiet tempor porttitor.",
+    "ourclients":"OUR CLIENTS",
+    "ourclientstext":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero. Vestibulum ac tristique diam. Aliquam imperdiet tempor porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero. Vestibulum ac tristique diam. Aliquam imperdiet tempor porttitor."
   },
   "ru": {
     "services": "Сервисы",
@@ -124,13 +119,13 @@ var arrLang = {
     "fastreltext":"Лорем ипсум долор сит амет, дуис цонцептам цу хис, ех мнесарчум дефиниебас диссентиунт сеа. Анимал латине ан яуо, вереар салутатус не сит. Тантас убияуе дуо ин, ад хис веро сцаевола сцрипторем. Те сеа опортере еррорибус, ет еос дицам плацерат, вери аргументум цомпрехенсам меи ид.",
     "innovation":"НЕПРЕРЫВНЫЕ ИННОВАЦИИ",
     "innovationtext":"Лорем ипсум долор сит амет, дуис цонцептам цу хис, ех мнесарчум дефиниебас диссентиунт сеа. Анимал латине ан яуо, вереар салутатус не сит. Тантас убияуе дуо ин, ад хис веро сцаевола сцрипторем. Те сеа опортере еррорибус, ет еос дицам плацерат, вери аргументум цомпрехенсам меи ид.",
-    "quote":"ПОЛУЧИТЬ РАСЦЕНКУ",
+    "quote":"ПОРТФОЛИО",
     "solser":"НАШИ СЕРВИСЫ И РЕШЕНИЯ",
     "welding":"СВАРКА И РЕЗКА",
     "weldingtext":"Лорем ипсум долор сит амет, дуис цонцептам цу хис, ех мнесарчум дефиниебас диссентиунт сеа. Анимал латине ан яуо, вереар салутатус не сит. Тантас убияуе дуо ин, ад хис веро сцаевола сцрипторем. Те сеа опортере еррорибус, ет еос дицам плацерат, вери аргументум цомпрехенсам меи ид.",
     "painting":"ПОКРАСКА",
     "paintingtext":"Лорем ипсум долор сит амет, дуис цонцептам цу хис, ех мнесарчум дефиниебас диссентиунт сеа. Анимал латине ан яуо, вереар салутатус не сит. Тантас убияуе дуо ин, ад хис веро сцаевола сцрипторем. Те сеа опортере еррорибус, ет еос дицам плацерат, вери аргументум цомпрехенсам меи ид.",
-    "engineering":"ПРОЕКТИРОВАНИЕ",
+    "engineering":"ДОКУМЕНТАЦИЯ",
     "engineeringtext":"Лорем ипсум долор сит амет, дуис цонцептам цу хис, ех мнесарчум дефиниебас диссентиунт сеа. Анимал латине ан яуо, вереар салутатус не сит. Тантас убияуе дуо ин, ад хис веро сцаевола сцрипторем. Те сеа опортере еррорибус, ет еос дицам плацерат, вери аргументум цомпрехенсам меи ид.",
     "machining":"ЧПУ СТАНОК",
     "machiningtext":"Лорем ипсум долор сит амет, дуис цонцептам цу хис, ех мнесарчум дефиниебас диссентиунт сеа. Анимал латине ан яуо, вереар салутатус не сит. Тантас убияуе дуо ин, ад хис веро сцаевола сцрипторем. Те сеа опортере еррорибус, ет еос дицам плацерат, вери аргументум цомпрехенсам меи ид.",
@@ -139,60 +134,75 @@ var arrLang = {
     "loccont":"Местоположение и контактная информация",
     "contacts": "Контакты",
     "getintouch":"СВЯЗАТЬСЯ С НАМИ",
-    "painting1":"Покрасочные работы"
-
-
+    "painting1":"Покрасочные работы",
+    "aboutinfo":"О нашей компании",
+    "20yearsquality":"20 ЛЕТ КАЧЕСТВА",
+    "aboutcompany":"Группа компаний ВЕКС была основана в 1996 году и включает в себя компании, осуществляющие следующие виды деятельности: производство и разработка профессионального упаковочного оборудования для упаковки в стретч-пленку организация услуг по упаковке багажа пассажиров в аэропортах и грузовых терминалах предоставление услуг по упаковке малогабаритных грузов с выездом к Заказчику металлообработка, , токарные и фрезерные работы, лазерная резка, сварка аргоном, порошковая покраска",
+    "ourservices":"УСЛУГИ КОТОРЫЕ МЫ ПРЕДЛАГАЕМ",
+    "ourservicestext":"Лорем ипсум долор сит амет, дуис цонцептам цу хис, ех мнесарчум дефиниебас диссентиунт сеа. Анимал латине ан яуо, вереар салутатус не сит. Тантас убияуе дуо ин, ад хис веро сцаевола сцрипторем. Те сеа опортере еррорибус, ет еос дицам плацерат, вери аргументум цомпрехенсам меи ид.",
+    "ourpartners":"НАШИ ПАРТНЕРЫ",
+    "ourpartnerstext":"Лорем ипсум долор сит амет, дуис цонцептам цу хис, ех мнесарчум дефиниебас диссентиунт сеа. Анимал латине ан яуо, вереар салутатус не сит. Тантас убияуе дуо ин, ад хис веро сцаевола сцрипторем. Те сеа опортере еррорибус, ет еос дицам плацерат, вери аргументум цомпрехенсам меи ид.",
+    "ourclients":"НАШИ КЛИЕНТЫ",
+    "ourclientstext":"Лорем ипсум долор сит амет, дуис цонцептам цу хис, ех мнесарчум дефиниебас диссентиунт сеа. Анимал латине ан яуо, вереар салутатус не сит. Тантас убияуе дуо ин, ад хис веро сцаевола сцрипторем. Те сеа опортере еррорибус, ет еос дицам плацерат, вери аргументум цомпрехенсам меи ид."
   }
 };
-
-// The default language is English
 var lang = "en";
 $("#option1").attr('checked', 'checked');
 $("#en").css({'background':'rgba(0, 0, 0, 0.45)','color':'#fff'});
-// Check for localStorage support
 if('localStorage' in window){
-   
-   var usrLang = localStorage.getItem('uiLang');
-   if (usrLang) {
+    var usrLang = localStorage.getItem('uiLang');
+     if (usrLang) {
        lang = usrLang;
        }
-   if(usrLang == "ru") {
+     if(usrLang == "ru") {
        lang = usrLang;
-     $("#option2").attr('checked', 'checked');
-     $("#ru").css({'background':'rgba(0, 0, 0, 0.45)','color':'#fff'});
-     $("#option1").removeAttr('checked');
-     $("#en").css({'background':'none','color':'#404040'});
-   }
-}
-
-console.log(lang);
-
-$(document).ready(function() {
-  $(".lang").each(function(index, element) {
-  $(this).text(arrLang[lang][$(this).attr("key")]);
-   });
-  
-  });  
-  $(".translate").click(function() {
-    var lang = $(this).attr("id");
-      if('localStorage' in window){
-        localStorage.setItem('uiLang', lang);
-        console.log(localStorage.getItem('uiLang'));
-        }
-      if (lang == "ru") {
         $("#option2").attr('checked', 'checked');
         $("#ru").css({'background':'rgba(0, 0, 0, 0.45)','color':'#fff'});
         $("#option1").removeAttr('checked');
         $("#en").css({'background':'none','color':'#404040'});
-      }
-      if (lang == "en") {
+   };
+};
+$(document).ready(function() {
+    $(".lang").each(function(index, element) {
+    $(this).text(arrLang[lang][$(this).attr("key")]);
+    });
+    $('.navbar-nav>li>a, #en, #ru').on('click', function(){
+        if($(window).width() < 576) {
+        $('.navbar-collapse').collapse('hide');
+        };
+    });
+    $(function () {
+        $(document).scroll(function () {
+        var $nav = $(".fixed-top");
+        $nav.toggleClass('scrolled', $(this).scrollTop() > $(".hero-image").height());
+        });
+    });
+    $('#exampleModal').on('show.bs.modal', function (e) {
+        if($(window).width() < 576)  {
+        return e.preventDefault()
+        };
+    });
+  });  
+$(".translate").click(function() {
+    var lang = $(this).attr("id");
+    if('localStorage' in window){
+        localStorage.setItem('uiLang', lang);
+        console.log(localStorage.getItem('uiLang'));
+    };
+    if (lang == "ru") {
+        $("#option2").attr('checked', 'checked');
+        $("#ru").css({'background':'rgba(0, 0, 0, 0.45)','color':'#fff'});
+        $("#option1").removeAttr('checked');
+        $("#en").css({'background':'none','color':'#404040'});
+    };
+    if (lang == "en") {
         $("#option1").attr('checked', 'checked');
         $("#en").css({'background':'rgba(0, 0, 0, 0.45)','color':'#fff'});
         $("#option2").removeAttr('checked');
         $("#ru").css({'background':'none','color':'#404040'});
-      }
-  $(".lang").each(function(index, element) {
-    $(this).text(arrLang[lang][$(this).attr("key")]);
+        };
+    $(".lang").each(function(index, element) {
+        $(this).text(arrLang[lang][$(this).attr("key")]);
     });
-  });
+});
 

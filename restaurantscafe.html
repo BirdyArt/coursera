@@ -4,9 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <!-- build:css css/main.css -->
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
   <link rel="stylesheet" href="css/styles.css">
+  <!-- endbuild -->
   <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
   <title>ViksMetalWorks</title>
   <link rel="icon" href="images/VMW - logo.png">
@@ -54,12 +56,12 @@
 		<div class="container max-width-1620">
 			<div class="row">
 		 		<div class="col-12">
-		            <h3>Our Portfolio</h3>
+		            <h3 class="lang" key="ourportfolio"></h3>
 		        </div>
 		        <ol class="col-12 breadcrumb">
-		            <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
-		            <li class="breadcrumb-item"><a href="./portfolio.html">Portfolio</a></li>
-		            <li class="breadcrumb-item active">Restaurants & Cafe</li>
+					<li class="breadcrumb-item"><a class="lang" key="home" href="./index.html"></a></li>
+		            <li class="breadcrumb-item"><a class="lang" key="portfolio" href="./portfolio.html"></a></li>
+		            <li class="breadcrumb-item active lang" key="restcafe"></li>
 		        </ol>
 		    </div>
 		</div>
@@ -232,11 +234,13 @@
            </div>
         </div>
     </footer>
-	   <script src="node_modules/jquery/jquery.min.js"></script>
-	   <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-	   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-	   <script src="node_modules/bootstrap-validator/dist/validator.min.js"></script>
-	   <script src="/js/Main.js"></script>
-	   <script src="/contact.js"></script>
+    <!-- build:js js/main.js -->
+	<script src="node_modules/jquery/jquery.min.js"></script>
+	<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+	<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="node_modules/bootstrap-validator/dist/validator.min.js"></script>
+	<script src="/js/Main.js"></script>
+	<script src="/contact.js"></script>
+	<!-- endbuild -->
 </body>
 </html>

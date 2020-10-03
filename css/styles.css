@@ -34,18 +34,51 @@ footer {
   font-size: 1rem;
   font-weight: bolder; }
 
-.hero-text button {
+#fancyBtn {
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  text-decoration: none; }
+
+#fancyBtn span {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 700; }
+
+#fancyBtn span:hover {
   color: #404040;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-  font-size: 22px;
-  font-weight: bolder;
-  border-radius: 10px;
-  border: 2px;
-  padding: 5px 15px;
-  border-color: #404040;
-  background-color: rgba(196, 196, 196, 0.7); }
-  .hero-text button:hover {
-    background-color: rgba(196, 196, 196, 0.85); }
+  text-decoration: none; }
+
+#fancyBtn svg, #fancyBtn svg rect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  fill: transparent; }
+
+@media (max-width: 576px) {
+  #fancyBtn svg, #fancyBtn svg rect {
+    fill: rgba(196, 196, 196, 0.3); } }
+
+#fancyBtn svg rect {
+  stroke: #fff;
+  stroke-width: 6;
+  transition: 1s;
+  stroke-dasharray: 100 160;
+  stroke-dashoffset: 340; }
+
+#fancyBtn:hover svg rect {
+  stroke: #fff;
+  stroke-dasharray: 260 0;
+  stroke-dashoffset: 0;
+  fill: rgba(196, 196, 196, 0.6); }
 
 .nav-link:hover, .list-unstyled a:hover {
   color: #FFFFFF !important;
@@ -84,7 +117,7 @@ footer {
     max-width: 1620px !important; } }
 
 .hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/Header.webp");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/Header.jpg");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -98,10 +131,20 @@ footer {
   background-size: cover;
   border-radius: 5px; }
 
+#aboutImg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/images/4.jpg");
+  margin-top: 40px;
+  margin-bottom: 30px;
+  background-size: cover;
+  border-radius: 5px;
+  height: 400px;
+  width: 360px;
+  background-position: center; }
+
 .hero-text {
   text-align: center;
   position: absolute;
-  top: 55%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white; }
@@ -122,6 +165,13 @@ footer {
   background-color: rgba(196, 196, 196, 0.2);
   background-size: cover;
   padding: 35px 0px;
+  position: relative;
+  overflow: hidden; }
+
+#about {
+  background-color: rgba(196, 196, 196, 0.2);
+  background-size: cover;
+  padding: 10px 0px;
   position: relative;
   overflow: hidden; }
 
@@ -161,7 +211,7 @@ footer {
   text-align: left;
   color: #404040; }
 
-#contactForm {
+#contactForm, #about {
   font-size: 2.2rem;
   font-weight: 700;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -221,6 +271,9 @@ footer {
   margin: 10px 0px;
   border-color: #404040;
   background-color: rgba(196, 196, 196, 0.7); }
+
+#about .col-sm-5 {
+  padding: 0px 30px; }
 
 #contactForm button {
   color: #404040;
@@ -343,7 +396,10 @@ footer {
 @media (max-width: 575px) {
   .navbar-brand img {
     width: 220px;
-    height: 55px; }
+    height: 55px;
+    padding-right: 0px; }
+  .navbar-brand {
+    padding-right: 20px; }
   .overlay-effect {
     opacity: 1 !important; }
   .hero-text p {
@@ -361,9 +417,9 @@ footer {
     font-size: 0.8rem;
     margin: 5px 5px; }
   .carousel-control-next {
-    margin-right: -2.4rem !important; }
+    margin-right: -2.6rem !important; }
   .carousel-control-prev {
-    margin-left: -2.4rem !important; }
+    margin-left: -2.6rem !important; }
   #carouselSay {
     margin: 20px 50px; }
   .review {

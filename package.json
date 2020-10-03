@@ -1,23 +1,33 @@
 {
-  "name": "confusion",
+  "name": "ViksMetalWorks",
   "version": "1.0.0",
-  "description": "This is a website for Ristorante Con Fusion",
+  "description": "This is a website for ViksMetalWorks",
   "main": "index.html",
   "scripts": {
     "start": "npm-run-all --parallel lite watch:scss",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lite": "lite-server",
     "scss": "node-sass -o css/ css/",
-    "watch:scss": "onchange \"css/*.scss\" -- npm run scss"
+    "watch:scss": "onchange \"css/*.scss\" -- npm run scss",
+    "clean": "rimraf dist",
+    "copyfonts": "copyfiles -f node_modules/@fortawesome/fontawesome-free/webfonts/* dist/webfonts",
+    "imagemin": "imagemin images/* -o dist/images && imagemin images/Restaurants -o dist/images/Restaurants && imagemin images/Home -o dist/images/Home && imagemin images/Painting -o dist/images/Painting && imagemin images/Sport -o dist/images/Sport && imagemin images/Packing -o dist/images/Packing",
+    "usemin": "usemin contactus.html -d dist --htmlmin -o dist/contactus.html && usemin restaurantscafe.html -d dist --htmlmin -o dist/restaurantscafe.html && usemin portfolio.html -d dist --htmlmin -o dist/portfolio.html && usemin about.html -d dist --htmlmin -o dist/about.html && usemin index.html -d dist --htmlmin -o dist/index.html",
+    "build": "npm run clean && npm run copyfonts && npm run imagemin && npm run usemin"
   },
   "author": "Artem",
   "license": "ISC",
   "devDependencies": {
     "bootstrap-validator": "^0.11.9",
+    "cssmin": "^0.4.3",
+    "htmlmin": "0.0.7",
     "lite-server": "^2.3.0",
     "node-sass": "^4.14.1",
     "npm-run-all": "^4.1.5",
-    "onchange": "^7.0.2"
+    "onchange": "^7.0.2",
+    "rimraf": "^3.0.2",
+    "uglifyjs": "^2.4.11",
+    "usemin-cli": "^0.6.0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.14.0",
