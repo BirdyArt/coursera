@@ -56,21 +56,7 @@ $bootstrap-xl: 1200px;
   border-radius: 10px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
-@mixin galImgStyle {
-  position: relative;
-  height: 75vw;
-  margin:10px 0px;
-   
-  @media (min-width: $bootstrap-sm) {
-    height: 35vw;
-    margin:15px 0px;
-  }
-   
-  @media (min-width: $bootstrap-md) {
-    height: 20vw;
-    margin:30px 0px;
-  }  
-}
+
 .navbar-brand {
   padding-right: 40px;
 }
@@ -175,20 +161,6 @@ $bootstrap-xl: 1200px;
 
 .custom-toggler .navbar-toggler-icon {
   background-image: url(  "data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(64, 64, 64, 1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-}
-
-.dropdown-item:hover {
-  background: none;
-  color: #FFFFFF;
-}
-
-@media (min-width: 768px) {
-  .dropdown:hover .dropdown-menu {
-    display: block;
-    background: rgba(196, 196, 196, 0.9);
-    margin-top: 0;
-    border-radius: 3px;
-  }
 }
 
 @media (min-width: 1360px) {
@@ -653,74 +625,8 @@ form {
 }
 
 #exampleModal .carousel-item img {
-  height: 30vw;
+  height: 35vw;
   object-fit: cover;
-}
-
-#cat1 {
-    background: url(/images/1.jpg) 0 0 no-repeat;
-    background-size: cover;
-    @include galImgStyle;
-}
-#cat2 {
-    background: url(/images/2.jpg) 0 0 no-repeat;
-    background-size: cover;
-    @include galImgStyle;
-}
-#cat3 {
-    background: url(/images/3.jpg) 0 0 no-repeat;
-    background-size: cover;
-    @include galImgStyle;
-}
-#cat4 {
-    background: url(/images/4.jpg) 0 0 no-repeat;
-    background-size: cover;
-    @include galImgStyle;
-}
-#pic1 {
-    background: url(/images/Restaurants/1.jpg) 0 0 no-repeat;
-    background-size: cover;
-    @include galImgStyle;
-}
-#pic2 {
-    background: url(/images/Restaurants/2.jpg) 0 0 no-repeat;
-    background-size: cover;
-    @include galImgStyle;
-}
-#pic3 {
-    background: url(/images/Restaurants/3.jpg) 0 0 no-repeat;
-    background-size: cover;
-    @include galImgStyle;
-}
-#pic4 {
-    background: url(/images/Restaurants/4.jpg) 0 0 no-repeat;
-    background-size: cover;
-    @include galImgStyle;
-}
-#pic5 {
-    background: url(/images/Restaurants/5.jpg) 0 0 no-repeat;
-    background-size: cover;
-    @include galImgStyle;
-}
-#pic6 {
-    background: url(/images/Restaurants/6.jpg) 0 0 no-repeat;
-    background-size: cover;
-    @include galImgStyle;
-}
-#pic7 {
-    background: url(/images/Restaurants/7.jpg) 0 0 no-repeat;
-    background-size: cover;
-    @include galImgStyle;
-}
-#pic8 {
-    background: url(/images/Restaurants/8.jpg) 0 0 no-repeat;
-    background-size: cover;
-    @include galImgStyle;
-}
-#pic9 {
-    background: url(/images/Restaurants/9.jpg) 0 0 no-repeat;
-    background-size: cover;
-    @include galImgStyle;
 }
 
 .full:hover .overlay-effect {

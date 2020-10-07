@@ -1,3 +1,27 @@
+const urls = [
+    'images/restaurantsImg/1.jpg', 
+    'images/restaurantsImg/2.jpg', 
+    'images/restaurantsImg/3.jpg', 
+    'images/restaurantsImg/4.jpg', 
+    'images/restaurantsImg/5.jpg', 
+    'images/restaurantsImg/6.jpg', 
+    'images/restaurantsImg/7.jpg', 
+    'images/restaurantsImg/8.jpg', 
+    'images/restaurantsImg/9.jpg', 
+    'images/sportImg/1.jpg', 
+    'images/sportImg/2.jpg', 
+    'images/sportImg/3.jpg',
+    'images/sportImg/4.jpg', 
+    'images/sportImg/5.jpg', 
+    'images/sportImg/6.jpg',
+    'images/sportImg/7.jpg', 
+    'images/sportImg/8.jpg', 
+    'images/sportImg/9.jpg',
+    'images/sportImg/10.jpg', 
+    'images/sportImg/11.jpg', 
+    'images/sportImg/12.jpg',
+    'images/sportImg/13.jpg',
+];
 var arrLang = {
   "en": {
     "services": "Services",
@@ -70,7 +94,12 @@ var arrLang = {
     "ourpartners":"OUR PARTNERS",
     "ourpartnerstext":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero. Vestibulum ac tristique diam. Aliquam imperdiet tempor porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero. Vestibulum ac tristique diam. Aliquam imperdiet tempor porttitor.",
     "ourclients":"OUR CLIENTS",
-    "ourclientstext":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero. Vestibulum ac tristique diam. Aliquam imperdiet tempor porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero. Vestibulum ac tristique diam. Aliquam imperdiet tempor porttitor."
+    "ourclientstext":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero. Vestibulum ac tristique diam. Aliquam imperdiet tempor porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at magna libero. Vestibulum ac tristique diam. Aliquam imperdiet tempor porttitor.",
+    "sportImg":"Sport",
+    "homeImg":"Home Decor",
+    "all":"All",
+    "restaurantsImg":"Restaurants & Cafe",
+    "paintingImg":"Painting"
   },
   "ru": {
     "services": "Сервисы",
@@ -143,7 +172,12 @@ var arrLang = {
     "ourpartners":"НАШИ ПАРТНЕРЫ",
     "ourpartnerstext":"Лорем ипсум долор сит амет, дуис цонцептам цу хис, ех мнесарчум дефиниебас диссентиунт сеа. Анимал латине ан яуо, вереар салутатус не сит. Тантас убияуе дуо ин, ад хис веро сцаевола сцрипторем. Те сеа опортере еррорибус, ет еос дицам плацерат, вери аргументум цомпрехенсам меи ид.",
     "ourclients":"НАШИ КЛИЕНТЫ",
-    "ourclientstext":"Лорем ипсум долор сит амет, дуис цонцептам цу хис, ех мнесарчум дефиниебас диссентиунт сеа. Анимал латине ан яуо, вереар салутатус не сит. Тантас убияуе дуо ин, ад хис веро сцаевола сцрипторем. Те сеа опортере еррорибус, ет еос дицам плацерат, вери аргументум цомпрехенсам меи ид."
+    "ourclientstext":"Лорем ипсум долор сит амет, дуис цонцептам цу хис, ех мнесарчум дефиниебас диссентиунт сеа. Анимал латине ан яуо, вереар салутатус не сит. Тантас убияуе дуо ин, ад хис веро сцаевола сцрипторем. Те сеа опортере еррорибус, ет еос дицам плацерат, вери аргументум цомпрехенсам меи ид.",
+    "sportImg":"Спорт",
+    "homeImg":"Для дома",
+    "all":"Все",
+    "restaurantsImg":"Рестораны и кафе",
+    "paintingImg":"Покрасочные работы"
   }
 };
 var lang = "en";
@@ -162,6 +196,20 @@ if('localStorage' in window){
         $("#en").css({'background':'none','color':'#404040'});
    };
 };
+function buildGallery (arr) {
+    $('#gallery').empty();
+    $('.carousel-inner').empty();
+    $('.carousel-indicators').empty();
+    for(var i=0 ; i< arr.length ; i++) {
+        $('<div class="col-12 col-sm-6 col-lg-3"><div class="full w-100" style="background: url('+arr[i]+') 0 0 no-repeat;background-size: cover;position: relative;height: 260px;margin: 10px 0px;" data-target="#carousel-example-generic" data-slide-to="'+i+'"><div class="d-none d-sm-block overlay-effect h-100 w-100"><i class="fas fa-expand-arrows-alt fa-3x"></i></div></div></div>').appendTo('#gallery');
+        $('<div class="carousel-item"><img src="'+arr[i]+'" class="d-block w-100"></div>').appendTo('.carousel-inner');
+        $('<li data-target="#carousel-example-generic" data-slide-to="'+i+'"></li>').appendTo('.carousel-indicators')
+    };
+    $('.carousel-item').first().addClass('active');
+    $('.carousel-indicators > li').first().addClass('active');
+    $('#carousel-example-generic').carousel();
+};
+buildGallery(urls);
 $(document).ready(function() {
     $(".lang").each(function(index, element) {
     $(this).text(arrLang[lang][$(this).attr("key")]);
@@ -181,6 +229,17 @@ $(document).ready(function() {
         if($(window).width() < 576)  {
         return e.preventDefault()
         };
+    });
+    $(".filter-button").click(function(){
+        var a = [];
+        var m = urls;
+        var value = $(this).attr('key');        
+        a.push(value);
+        if(value !== "all")
+        {
+        m = urls.filter(u => a.every(s => u.includes(s)));
+        };
+        buildGallery(m);
     });
   });  
 $(".translate").click(function() {
@@ -205,4 +264,5 @@ $(".translate").click(function() {
         $(this).text(arrLang[lang][$(this).attr("key")]);
     });
 });
+
 
