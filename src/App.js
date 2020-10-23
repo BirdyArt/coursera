@@ -5,6 +5,7 @@ import { far } from '@fortawesome/free-regular-svg-icons';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import Main from './components/MainComponent';
 import './App.css';
+import { BrowserRouter } from 'react-router-dom';
 
 library.add(fab, far, fas);
 
@@ -12,9 +13,11 @@ class App extends Component {
  
   render() {
     return (
+      <BrowserRouter>
       <div>
         <Main />    
       </div>
+      </BrowserRouter>
     );
   }
 }
