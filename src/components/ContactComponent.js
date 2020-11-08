@@ -20,8 +20,8 @@ class Contact extends Component {
     }
 
     handleSubmit(values) {
-      console.log ("Current State is: " + JSON.stringify(values))
-      alert("Current State is: " + JSON.stringify(values))
+      console.log ("Current State is: " + JSON.stringify(values));
+      alert("Current State is: " + JSON.stringify(values));
     }
 
     render() {
@@ -154,7 +154,7 @@ class Contact extends Component {
                             <Row className="form-group">
                                 <Label htmlFor="message" md={2}>Your Feedback</Label>
                                 <Col md={10}>
-                                    <Control.text model=".message" id="message" name="message"
+                                    <Control.textarea model=".message" id="message" name="message"
                                         rows="12"
                                         className="form-control" />
                                 </Col>
