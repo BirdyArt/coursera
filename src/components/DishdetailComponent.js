@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Control, LocalForm, Errors } from 'react-redux-form';  
 import { Loading } from './LoadingComponent';
 import { baseUrl } from '../shared/baseUrl';
+import { FadeTransform, Fade, Stagger } from 'react-animation-components';
 
 
 const maxLength = (len) => (val) => !(val) || (val.length <= len);
@@ -96,13 +97,18 @@ class CommentForm extends Component {
 
     const RenderDish = ({dish}) => {
       return (
-	        <Card>
-	        <CardImg width="100%" src={baseUrl + dish.image} alt={dish.name} />
-	        <CardBody>
-	            <CardTitle>{dish.name}</CardTitle>
-	            <CardText>{dish.description}</CardText>
-	        </CardBody>
+	    <FadeTransform in 
+            transformProps={{
+                exitTransform: 'scale(0.5) translateY(-50%)'
+                }}>    
+            <Card>
+    	        <CardImg width="100%" src={baseUrl + dish.image} alt={dish.name} />
+    	        <CardBody>
+    	            <CardTitle>{dish.name}</CardTitle>
+    	            <CardText>{dish.description}</CardText>
+    	        </CardBody>
 	        </Card>
+        </FadeTransform>
       );
     }
 
@@ -111,16 +117,20 @@ class CommentForm extends Component {
             const commentDetails = comments.map((comment) => {
                 return (
 					<ul key={comment.id} className="list-unstyled">
+                        <Fade in>
 						<li>{comment.comment}</li>
 						<li>-- {comment.author}, {new Intl.DateTimeFormat('en-US', {year: 'numeric', month: 'long', day: '2-digit'}).format(new Date(comment.date))}</li>
-					</ul>
+                        </Fade>					
+                    </ul>
 				);
             });
         
             return (
                 <div>
-                    <h4>Comments</h4>    
+                    <h4>Comments</h4>
+                    <Stagger in>
                     {commentDetails}
+                    </Stagger>
                     <CommentForm dishId={dishId} postComment={postComment} />
                 </div>
             );
